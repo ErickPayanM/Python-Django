@@ -1,0 +1,40 @@
+.encabezado a{
+    color: white;
+  }
+  
+  .encabezado a:hover{
+    color: white;
+  }
+  
+  .encabezado a:active{
+    color: white;
+  }
+
+.tabla_td{
+    border: blue 4px ridge;
+    margin: 15px;
+    padding: 15px;
+    
+}
+.titulo{
+    color: red;
+    font-style: italic; 
+    margin-top: 12%; 
+
+
+}
+.encabezado{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    color: white;
+    font-size: 3vw;
+    display: flex;
+    top: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+.enc_text{
+    float: right; 
+}

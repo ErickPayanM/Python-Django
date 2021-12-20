@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <h1>{{a.Articulo}}</h1>
+    <table>
+        <tr>
+            <td><h3>ID</h3></td>
+            <td><h4>{{a.id}}</4>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Descripcion</h3></td>
+            <td>
+                <h4>{{a.Description}}</h4>
+            </td>
+            <td>
+        </tr>
+        <tr>
+            <td><h3>Cantidad</h3></td>
+            <td>
+                <h4>{{a.Cantidad}}</h4>
+            </td>
+            <form action="{% url 'stock:suma' a.id%}" method="post">
+            <td><input type="submit" value="Añadir"></td>
+            <td><input type="text" name="sumar"></td>
+            </form>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <form action="{% url 'stock.resta' a.id%}" method="post">
+            <td><input type="submit" value="quitar"></td>
+            <td><input type="text" name="restar"></td>
+            </form>
+        </tr>
+    </table>
+    
+</body>
+</html>

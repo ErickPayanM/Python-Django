@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    {% load static %}
+    <link href="{% static 'stock/main.css' %}"" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="encabezado">
+        <img src="{% static 'stock/Captura.png' %}" alt="">
+        <a href="/stock/">Inicio</a>
+
+    </div>
+    <div class="titulo">
+        <h1 class="titulo tabla_td"><center>Catalogo</center></h1>
+    </div>
+    <div>
+    <table >
+        <thead>
+            <tr>
+                <td >ID</td>
+                <td>Articulo</td>
+                <td>Descripcion</td>
+                <td>Cantidad</td>
+            </tr>
+        </thead>
+        
+        <tbody class="tabla_td">
+            
+            {% if A %}
+            {% for Ar in A%}
+           
+            <tr >
+                <td class="tabla_td"><a href="{{Ar.id}}/"> {{Ar.id }}</a></td>
+                <td class="tabla_td">{{ Ar.Articulo }}</td>
+                <td class="tabla_td">{{ Ar.Description }}</td>
+                <td class="tabla_td">{{ Ar.Cantidad }}</td>
+
+            </tr>
+        
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="4">No hay registro
+                </td>
+            </tr>
+            {% endif %}
+            
+
+        </tbody>
+        </div>
+    </table>
+    <div>
+        <li><a href="/stock/">Inicio</a></li>
+    </div>
+</body>
+</html>

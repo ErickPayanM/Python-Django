@@ -1,0 +1,35 @@
+1:37:35
+Apuntes lenguaje de programacion en Python
+
+
+1 No se pueden nombrar variables empezando el nombre con un numero
+	Los nombres pueden contener caracteres alfanumericos(A-Z, a-z y _) ejemplo num_vistas1
+	Se distingue los nombresde de las variables entre mayusculas ejmplo Edad es distinto de edad y EDAD
+	Tipos de variables 
+		int = entero 1, 0 y -1 por ejemplo
+		float = decimal 1.1, 0.0, -1.1 y 4.0 (si el valor despues del punto decimal es 0 se considera float
+		bool = True o False se escriben en el codigo con la inicial mayuscula, se usan para ciclos o condicionantes
+2 Operadores aritmeticos
+	Al dividir con el opreador / se retorna un alor booleano ejemplo 3/3 = 1.0
+	Para evitar el .0 hay que usar el operador // ejemplo 3//3 = 1, otro ejemplo 5/3 = 1, trunca todo lo que va despues del punto
+	Para usar el operador exponente se usa doble ** ejemplo 5**3=125
+3 Operadores logicos
+	And verifica si el valor derecho y el izquierdo son verdaderos
+	Tabla de verdad
+	x	y	X and Y
+	True	True	True
+	True	False	False
+	False	True	False
+	False	False	False
+
+	Tabla or
+	x	y	X or Y
+	True	True	True
+	True	False	True
+	False	True	True
+	False	False	False	
+	
+	Tabla not	
+	X	not X
+
+
