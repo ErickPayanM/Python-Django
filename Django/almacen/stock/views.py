@@ -50,5 +50,9 @@ def resta(request, restatoria):
     return HttpResponseRedirect(reverse('stock:catalogo',))
 def articulo_nuevo(request):
     new_articulo = request.POST['Nombre_nuevo']
-    new_descripcion = request.POST['Descripcion']
+    new_descripcion = request.POST['Descripcion_nuevo']
+    new_cantidad = request.POST['Cantidad_nueva']
+    nregistro = Articulos( Articulo = new_articulo, Description = new_descripcion, Cantidad = new_cantidad)
+    nregistro.save()
+    return HttpResponseRedirect(reverse('stock:catalogo',))
 

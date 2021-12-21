@@ -97,7 +97,7 @@
 	margin: 2% 10%;
 	padding: 50px 40px 13px 40px;
 	border-radius: 10px;
-	background: rgb(238, 69, 69);
+	background-color: rgb(238, 69, 69);
 	background: -moz-linear-gradient(#fff, #999);
 	background: -webkit-linear-gradient(#fff, #999);
 	background: -o-linear-gradient(#fff, #999);
