@@ -17,18 +17,21 @@
     <div class="titulo">
         <h1 class="titulo tabla_td"><center>Catalogo</center></h1>
     </div>
-    <div>
+    <p class="">
+        <a href="#openModal" class=""> + AÑADIR ARTICULO </a>
+    </p>
+
     <table >
         <thead>
             <tr>
-                <td >ID</td>
-                <td>Articulo</td>
-                <td>Descripcion</td>
-                <td>Cantidad</td>
+                <td class="tr_cab">ID</td>
+                <td class="tr_cab">Articulo</td>
+                <td class="tr_cab">Descripcion</td>
+                <td class="tr_cab" width="100px">Cantidad</td>
             </tr>
         </thead>
         
-        <tbody class="tabla_td">
+        <tbody class="">
             
             {% if A %}
             {% for Ar in A%}
@@ -56,5 +59,26 @@
     <div>
         <li><a href="/stock/" class="enc_text">Inicio</a></li>
     </div>
+    <div id="openModal" class="modalDialog">
+        <div>
+        <h3><center>Añadir articulo</center></h3>
+        <a href="#close" title="Close" class="close">X</a>
+        <form action="{% url 'stock:articulo_nuevo' %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Articulo</td>
+                    <td>Descripcion</td>
+                    <td>Cantidad</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="Nombre_nuevo"></td>
+                    <td><input type="text" name="Descripcion_nuevo"></td>
+                    <td><input type="text" name="Cantidad_nueva"></td>
+              </tr>
+            </table>
+        </form>
+        </div>
+        
 </body>
 </html>

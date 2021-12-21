@@ -11,9 +11,11 @@
   }
 
 .tabla_td{
-    border: blue 4px ridge;
+    border: blue 2px solid;
     margin: 15px;
     padding: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 .titulo{
@@ -36,4 +38,71 @@
 }
 .enc_text{
     padding-left: 80%;
+}
+.tr_cab{
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: brown;
+  padding: 2%;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: fixed;
+	right: 2%;
+	text-align: center;
+	top: 1%;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+    
+}
+.close:hover { background: #00d9ff; }
+.sin-sub{
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: none;
+    text-decoration: none;
+}
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 80%;
+  height: 30%;
+	position: relative;
+	margin: 2% 10%;
+	padding: 50px 40px 13px 40px;
+	border-radius: 10px;
+	background: rgb(238, 69, 69);
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+overflow: auto;
 }

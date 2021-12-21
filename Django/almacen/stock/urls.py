@@ -13,5 +13,6 @@ urlpatterns = [
     path('catalogo/<int:art_id>/', views.det_art, name='det_art'),
     path('suma/<int:sumatoria>/', views.suma, name='suma'),
     path('resta/<int:restatoria>/', views.resta, name='resta'),
+    path('articulo_nuevo', views.articulo_nuevo, name='articulo_nuevo'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
