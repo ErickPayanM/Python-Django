@@ -29,6 +29,7 @@
                 <h4>{{a.Cantidad}}</h4>
             </td>
             <form action="{% url 'stock:suma' a.id%}" method="post">
+                {% csrf_token %}
             <td><input type="submit" value="Añadir"></td>
             <td><input type="text" name="sumar"></td>
             </form>
@@ -37,7 +38,8 @@
         <tr>
             <td></td>
             <td></td>
-            <form action="{% url 'stock.resta' a.id%}" method="post">
+            <form action="{% url 'stock:resta' a.id%}" method="post">
+                {% csrf_token %}
             <td><input type="submit" value="quitar"></td>
             <td><input type="text" name="restar"></td>
             </form>

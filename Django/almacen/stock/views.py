@@ -4,8 +4,10 @@ from django.http import HttpResponse
 from django.template import loader
 from django.db import models
 from django.urls import reverse
+from django import forms
 
-import stock
+
+
 from .models import Articulos
 
 # Create your views here.
@@ -29,6 +31,13 @@ def det_art(request, art_id):
 def suma(request, sumatoria):
     sumatoria = Articulos.objects.get(pk=sumatoria)
     var1 = request.POST['sumar']
-    sumatoria.Cantidad += var1 
+    sumatoria.Cantidad += int(var1) 
     sumatoria.save()
-    return HttpResponseRedirect(reverse('sock:det_art', args=(sumatoria.id,)))
+    return HttpResponseRedirect(reverse('stock:catalogo',))
+def resta(request, restatoria):
+    restatoria = Articulos.objects.get(pk=restatoria)
+    var1 = request.POST['restar']
+    int(var1)
+    restatoria.Cantidad -= int(var1) 
+    restatoria.save()
+    return HttpResponseRedirect(reverse('stock:catalogo',))
